@@ -14,7 +14,7 @@ class ViewController: UIViewController, UIPickerViewDelegate,UIPickerViewDataSou
 
     @IBOutlet var currentPicker: UIPickerView!
     @IBOutlet var labelPrecio: UILabel!
-     
+    
     let currenciesArray = ["AUD","BRL","CAD","CNY","EUR","GBP","HKD","IDR","ILS","INR","JPY","MXN","NOK","NZD","PLN","RON","RUB"]
     let currencyArray =
         ["$", "R$", "$", "¥", "€", "£", "$", "Rp", "₪", "₹", "¥", "$", "kr", "$", "zł", "lei", "₽", "kr", "$", "$", "R"
