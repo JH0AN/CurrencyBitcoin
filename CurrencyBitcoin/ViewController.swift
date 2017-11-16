@@ -15,10 +15,12 @@ class ViewController: UIViewController, UIPickerViewDelegate,UIPickerViewDataSou
     @IBOutlet var currentPicker: UIPickerView!
     @IBOutlet var labelPrecio: UILabel!
     
-    let currenciesArray = ["AUD","BRL","CAD","CNY","EUR","GBP","HKD","IDR","ILS","INR","JPY","MXN","NOK","NZD","PLN","RON","RUB"]
+    let currenciesArray = ["AUD","BRL","CAD","CNY","EUR","GBP","HKD","IDR","ILS","INR","JPY","MXN","NOK","NZD","PLN","RON","RUB","EGP","KZT","PHP"]
     let currencyArray =
         ["$", "R$", "$", "¥", "€", "£", "$", "Rp", "₪", "₹", "¥", "$", "kr", "$", "zł", "lei", "₽", "kr", "$", "$", "R"
         ]
+    let baseURL = "https://apiv2.bitcoinaverage.com/indices/global/ticker/BTC"
+    var finalURL: String?
     override func viewDidLoad() {
         super.viewDidLoad()
         currentPicker.delegate = self
@@ -39,6 +41,33 @@ class ViewController: UIViewController, UIPickerViewDelegate,UIPickerViewDataSou
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         print(currenciesArray[row])
+        finalURL = baseURL+currenciesArray[row]
+        getBitcoinData(url: finalURL!)
+    }
+    
+    //MARK: -Networking
+    
+    func getBitcoinData(url: String)
+    {
+        Alamofire.request(url, method: .get).responseJSON { (response) in
+            if response.result.isSuccess
+            {
+                let bitCoinJSON : JSON = JSON(response.result.value!)
+                self.updateBitcoinData(json: bitCoinJSON)
+            }else{
+               print("Error procesando la tarea... \(response.result.error)")
+                self.labelPrecio.text = "Se presento un problema en la conexion"
+            }
+        }
+    }
+    
+    func updateBitcoinData(json: JSON)
+    {
+        if let bitCoinResult = json["ask"].double{
+            labelPrecio.text = String(bitCoinResult)
+        }else{
+            labelPrecio.text = "Servicio no Disponible"
+        }
     }
 }
 
