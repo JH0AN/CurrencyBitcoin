@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D347CF41FBD30B0007F9D33 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D347CF31FBD30B0007F9D33 /* Default-568h@2x.png */; };
+		8D347CF71FBD3210007F9D33 /* Logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D347CF61FBD3210007F9D33 /* Logic.swift */; };
 		8DAD2C671FAAB2010016ED9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAD2C661FAAB2010016ED9A /* AppDelegate.swift */; };
 		8DAD2C691FAAB2010016ED9A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAD2C681FAAB2010016ED9A /* ViewController.swift */; };
 		8DAD2C6C1FAAB2010016ED9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DAD2C6A1FAAB2010016ED9A /* Main.storyboard */; };
@@ -17,6 +19,8 @@
 
 /* Begin PBXFileReference section */
 		5CBF0BFF99BB2018E00F9E8E /* Pods-CurrencyBitcoin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyBitcoin.release.xcconfig"; path = "Pods/Target Support Files/Pods-CurrencyBitcoin/Pods-CurrencyBitcoin.release.xcconfig"; sourceTree = "<group>"; };
+		8D347CF31FBD30B0007F9D33 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		8D347CF61FBD3210007F9D33 /* Logic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logic.swift; sourceTree = "<group>"; };
 		8DAD2C631FAAB2010016ED9A /* CurrencyBitcoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CurrencyBitcoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DAD2C661FAAB2010016ED9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DAD2C681FAAB2010016ED9A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,9 +44,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D347CF51FBD319F007F9D33 /* Modelo */ = {
+			isa = PBXGroup;
+			children = (
+				8D347CF61FBD3210007F9D33 /* Logic.swift */,
+			);
+			name = Modelo;
+			sourceTree = "<group>";
+		};
 		8DAD2C5A1FAAB2010016ED9A = {
 			isa = PBXGroup;
 			children = (
+				8D347CF31FBD30B0007F9D33 /* Default-568h@2x.png */,
 				8DAD2C651FAAB2010016ED9A /* CurrencyBitcoin */,
 				8DAD2C641FAAB2010016ED9A /* Products */,
 				AEE9FAEDECD6ECBD4E341C80 /* Pods */,
@@ -61,6 +74,7 @@
 		8DAD2C651FAAB2010016ED9A /* CurrencyBitcoin */ = {
 			isa = PBXGroup;
 			children = (
+				8D347CF51FBD319F007F9D33 /* Modelo */,
 				8DAD2C661FAAB2010016ED9A /* AppDelegate.swift */,
 				8DAD2C681FAAB2010016ED9A /* ViewController.swift */,
 				8DAD2C6A1FAAB2010016ED9A /* Main.storyboard */,
@@ -152,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DAD2C711FAAB2010016ED9A /* LaunchScreen.storyboard in Resources */,
+				8D347CF41FBD30B0007F9D33 /* Default-568h@2x.png in Resources */,
 				8DAD2C6E1FAAB2010016ED9A /* Assets.xcassets in Resources */,
 				8DAD2C6C1FAAB2010016ED9A /* Main.storyboard in Resources */,
 			);
@@ -221,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DAD2C691FAAB2010016ED9A /* ViewController.swift in Sources */,
+				8D347CF71FBD3210007F9D33 /* Logic.swift in Sources */,
 				8DAD2C671FAAB2010016ED9A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -385,6 +401,7 @@
 				8DAD2C771FAAB2010016ED9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
