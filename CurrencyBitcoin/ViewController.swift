@@ -49,7 +49,7 @@ class ViewController: UIViewController, UIPickerViewDelegate,UIPickerViewDataSou
     }
     
     //MARK: -Networking
-    
+        
     func getBitcoinData(url: String)
     {
         Alamofire.request(url, method: .get).responseJSON { (response) in
